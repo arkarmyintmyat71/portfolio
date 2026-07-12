@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkar Myint Myat — Web Developer (Full-Stack)</title>
+  <meta name="description" content="Arkar Myint Myat — Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
+  <meta property="og:title" content="Arkar Myint Myat — Web Developer (Full-Stack)">
+  <meta property="og:description" content="Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
+  <meta property="og:image" content="assets/img/profile.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/jpeg" href="assets/img/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+
+  <header>
+    <div class="wrap nav-row">
+      <div class="logo">Arkar<span class="cursor">_</span></div>
+      <nav>
+        <ul class="navlinks" id="navlinks">
+          <li><a href="#home" class="active">home</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#skills">stack</a></li>
+          <li><a href="#projects">work</a></li>
+          <li><a href="#certificates">certs</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <button class="navtoggle" id="navtoggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy">
+          <p class="hello-tag">Hello,</p>
+          <h1>I'm <span class="amber">Arkar</span><br>Myint Myat</h1>
+          <p class="role-tag">Web Developer (Full-Stack)</p>
+          <p class="hero-desc">I'm a Computer Science student at Rangsit University in Bangkok with a passion for
+            building web applications from start to finish.
+            I enjoy developing back-end systems with Java and creating responsive, user-friendly interfaces using React
+            and Next.js.
+            With a strong foundation in HTML and CSS, I focus on building clean, functional, and reliable web
+            applications.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn-primary" href="#contact">Hire Me</a>
+            <a class="btn-outline" href="#projects">View My Work</a>
+          </div>
+
+          <div class="social-row">
+            <a href="https://github.com/arkarmyintmyat71" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.3-1.6 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.9 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arkar-myint-myat-23a4a4283" target="_blank" rel="noopener"
+              aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z" />
+              </svg>
+            </a>
+            <a href="mailto:arkarmyintmyat71@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16v16H4z" />
+                <path d="m4 6 8 7 8-7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- large hero portrait -->
+        <div class="stack-portrait">
+          <img src="assets/img/profile.jpg" alt="Arkar Myint Myat" class="portrait-img">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-copy" data-reveal>
+          <p class="section-index">About</p>
+          <h2>Built for the whole stack, <span>not just one layer.</span></h2>
+          <p class="lede">I'm a Computer Science student at Rangsit University
+            who enjoys understanding how an entire system works—not
+            just one part of it. From designing database schemas and
+            building APIs to creating interfaces that people actually use,
+            I like seeing how every piece fits together.</p>
+
+          <p class="lede">My journey started with one semester in Electrical
+            Communication Engineering before I earned a Java Developer
+            certificate from JDC, which opened the door to a junior Java
+            developer role at a commercial bank. While working there,
+            I kept studying and completed a Level 4 Diploma in Computing.
+            After about a year in that role, I decided to go further and
+            enrolled as a Computer Science student in Bangkok, building on
+            everything I'd learned so far.</p>
+
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="tdot" style="background:#ff5f57"></span>
+              <span class="tdot" style="background:#febc2e"></span>
+              <span class="tdot" style="background:#28c840"></span>
+              <span class="term-title">whoami.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="out">arkar-myint-myat — web-developer (full-stack)</p>
+              <p><span class="prompt">$</span> cat focus.txt</p>
+              <p class="out">Java · React · Next.js · JavaScript · HTML/CSS</p>
+              <p><span class="prompt">$</span> cat status.txt</p>
+              <p class="out">open to internships &amp; junior web-developer (full-stack) roles<span
+                  class="blink">_</span></p>
+            </div>
+          </div>
+
+          <div class="fact-row" data-reveal>
+            <div class="fact-item">
+              <span class="fact-num">1+ yr</span>
+              <span class="fact-label">production Java @ a bank</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">2</span>
+              <span class="fact-label">countries lived &amp; studied in</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-num">B2</span>
+              <span class="fact-label">English · British Council</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="wrap">
+        <p class="section-index center" data-reveal>Experience</p>
+        <h2 class="center" data-reveal>Time served <span>in production.</span></h2>
+
+        <div class="timeline" data-reveal>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-date">04/2023 — 05/2024</span>
+                <span class="tl-tag">Yoma Bank</span>
+              </div>
+              <h3>Junior Backend Developer (Java)</h3>
+              <p class="tl-loc">Yangon, Myanmar · Digital Products Dept., Products, Services &amp; Channels Division</p>
+              <ul class="tl-list">
+                <li>Started on the <strong>Business Banking Portal</strong> team, handling error-message and
+                  notification services behind gRPC and REST controllers.</li>
+                <li>Now on the <strong>Research &amp; Development</strong> team, building part of a workflow engine that
+                  feeds into Kafka.</li>
+                <li>Deliver service responses from Kafka into new Kafka topics using gRPC.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <span class="tl-date">04/2023 — Present</span>
+                <span class="tl-tag">Grafo-Tech</span>
+              </div>
+              <h3>Owner</h3>
+              <p class="tl-loc">Yangon, Myanmar</p>
+              <ul class="tl-list">
+                <li>Run a small tech venture alongside full-time backend work — scoping, building and shipping client
+                  projects end to end.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="wrap">
+        <p class="section-index center" data-reveal>Stack</p>
+        <h2 class="center" data-reveal>What each layer <span>is built with.</span></h2>
+
+        <div class="layer-grid" data-reveal>
+
+          <div class="layer-col">
+            <div class="layer-head"><span class="layer-dot amber"></span>Backend</div>
+            <div class="ruler-row">
+              <span class="ruler-label">Java</span>
+              <div class="ruler"><i style="width:88%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">Spring Boot &amp; Spring MVC</span>
+              <div class="ruler"><i style="width:82%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">REST APIs &amp; gRPC</span>
+              <div class="ruler"><i style="width:78%"></i></div>
+            </div>
+          </div>
+
+          <div class="layer-col">
+            <div class="layer-head"><span class="layer-dot teal"></span>Frontend</div>
+            <div class="ruler-row">
+              <span class="ruler-label">Angular</span>
+              <div class="ruler"><i style="width:70%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">JavaScript</span>
+              <div class="ruler"><i style="width:80%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">Bootstrap</span>
+              <div class="ruler"><i style="width:72%"></i></div>
+            </div>
+          </div>
+
+          <div class="layer-col">
+            <div class="layer-head"><span class="layer-dot paper"></span>Data &amp; Messaging</div>
+            <div class="ruler-row">
+              <span class="ruler-label">SQL / MySQL Workbench</span>
+              <div class="ruler"><i style="width:76%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">MongoDB</span>
+              <div class="ruler"><i style="width:65%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">Kafka &amp; Graylog</span>
+              <div class="ruler"><i style="width:68%"></i></div>
+            </div>
+          </div>
+
+          <div class="layer-col">
+            <div class="layer-head"><span class="layer-dot amber"></span>Tooling</div>
+            <div class="ruler-row">
+              <span class="ruler-label">HTML5 &amp; CSS3</span>
+              <div class="ruler"><i style="width:85%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">Git · GitHub · GitLab</span>
+              <div class="ruler"><i style="width:80%"></i></div>
+            </div>
+            <div class="ruler-row">
+              <span class="ruler-label">Docker</span>
+              <div class="ruler"><i style="width:65%"></i></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="wrap">
+        <p class="section-index center" data-reveal>Work</p>
+        <h2 class="center" data-reveal>A few things <span>I've shipped.</span></h2>
+
+        <div class="filter-row" data-reveal>
+          <button class="filter-btn active" data-filter="all">all</button>
+          <button class="filter-btn" data-filter="backend">backend</button>
+          <button class="filter-btn" data-filter="frontend">frontend</button>
+          <button class="filter-btn" data-filter="fullstack">fullstack</button>
+        </div>
+
+        <div class="proj-grid" data-reveal>
+
+          <article class="proj-card" data-cat="backend">
+            <div class="proj-head">
+              <span class="proj-index">W.01</span>
+              <span class="proj-tag">Java</span>
+            </div>
+            <h3>Java Spring Boot Backend</h3>
+            <p>A REST API back end covering data models, endpoints and service-layer
+              logic for a real-world application.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Java-SpringBoot-Backend" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="backend">
+            <div class="proj-head">
+              <span class="proj-index">W.02</span>
+              <span class="proj-tag">Java</span>
+            </div>
+            <h3>Spring Security</h3>
+            <p>An authentication and authorization module built with Spring Security —
+              covering login, role-based access control and securing REST endpoints.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/SpringSecurity" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="frontend">
+            <div class="proj-head">
+              <span class="proj-index">W.03</span>
+              <span class="proj-tag">React</span>
+            </div>
+            <h3>Chatbot</h3>
+            <p>A conversational chat interface that takes user input and returns
+              automated responses in a message-based UI.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Chatbot-Project" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="frontend">
+            <div class="proj-head">
+              <span class="proj-index">W.04</span>
+              <span class="proj-tag">Next.js</span>
+            </div>
+            <h3>Employee Management System</h3>
+            <p>A system for managing employee records — covering core CRUD operations
+              like adding, updating and viewing employee data.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Employee-Management-System" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="frontend">
+            <div class="proj-head">
+              <span class="proj-index">W.05</span>
+              <span class="proj-tag">HTML · CSS</span>
+            </div>
+            <h3>Standing Desk Landing Page</h3>
+            <p>A clean, focused product landing page built around clear layout and
+              simple, trustworthy visuals.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Standing-desk" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="frontend">
+            <div class="proj-head">
+              <span class="proj-index">W.06</span>
+              <span class="proj-tag">Front-End</span>
+            </div>
+            <h3>Angular Front-End</h3>
+            <p>A component-driven interface focused on clean structure, reusable
+              components and a responsive layout.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Angular-FrontEnd" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="fullstack">
+            <div class="proj-head">
+              <span class="proj-index">W.07</span>
+              <span class="proj-tag">Java(MVC)</span>
+            </div>
+            <h3>Plesant Corner</h3>
+            <p>A Java-based web application — exact scope and features to be confirmed.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Plesant-Corner" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+          <article class="proj-card" data-cat="backend">
+            <div class="proj-head">
+              <span class="proj-index">W.08</span>
+              <span class="proj-tag">Python</span>
+            </div>
+            <h3>Rangsit Semester Project</h3>
+            <p>University coursework applying core programming and problem-solving
+              concepts to a practical assignment.</p>
+            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Rangsit_sec_sem-PJ" target="_blank"
+              rel="noopener">→ view_repository</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates">
+      <div class="wrap">
+        <p class="section-index center" data-reveal>Certificates</p>
+        <h2 class="center" data-reveal>Credentials <span>along the way.</span></h2>
+
+        <div class="cert-grid" data-reveal>
+
+          <article class="cert-card">
+            <div class="cert-head">
+              <span class="cert-index">C.01</span>
+              <span class="cert-tag">NCC Education</span>
+            </div>
+            <h3>Level 4 Diploma in Computing</h3>
+            <p class="cert-issuer">KMD Institute, Myanmar · 2024</p>
+            <div class="cert-stat">7 Distinction · 1 Merit</div>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-head">
+              <span class="cert-index">C.02</span>
+              <span class="cert-tag">JDC</span>
+            </div>
+            <h3>One Stop Java Course</h3>
+            <p class="cert-issuer">Java Developer Class · Dec 18, 2022</p>
+            <p>Covers Java Standard Edition, Spring Framework and Angular
+              Framework — the same stack behind most of the projects above.</p>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-head">
+              <span class="cert-index">C.03</span>
+              <span class="cert-tag">British Council</span>
+            </div>
+            <h3>English — B2</h3>
+            <p class="cert-issuer">British Council</p>
+          </article>
+
+          <article class="cert-card">
+            <div class="cert-head">
+              <span class="cert-index">C.04</span>
+              <span class="cert-tag">Myanma Computer Co.</span>
+            </div>
+            <h3>Microsoft Office 2010 Course</h3>
+            <p class="cert-issuer">Myanma Computer Company</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <p class="section-index center" data-reveal>Contact</p>
+        <h2 class="center" data-reveal>Let's build <span>something.</span></h2>
+
+        <div class="terminal contact-terminal" data-reveal>
+          <div class="terminal-bar">
+            <span class="tdot" style="background:#ff5f57"></span>
+            <span class="tdot" style="background:#febc2e"></span>
+            <span class="tdot" style="background:#28c840"></span>
+            <span class="term-title">send_message.sh</span>
+          </div>
+          <form class="terminal-body contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST">
+            <label class="cmd-row"><span class="prompt">&gt; name:</span>
+              <input id="name" name="name" type="text" placeholder="your name" required>
+            </label>
+            <label class="cmd-row"><span class="prompt">&gt; email:</span>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </label>
+            <label class="cmd-row cmd-row-area"><span class="prompt">&gt; message:</span>
+              <textarea id="message" name="message" placeholder="tell me about your project..." required></textarea>
+            </label>
+            <button class="run-btn" type="submit">$ run ./send.sh</button>
+            <p class="form-note" id="formMsg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot-row">
+      <div class="logo">Arkar<span class="cursor">_</span></div>
+      <p class="foot-copy">© 2026 Arkar Myint Myat — built with HTML, CSS &amp; JS.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
