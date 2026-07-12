@@ -39,34 +39,49 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ===== Contact form (placeholder — wire up to Formspree or an API route) =====
-// ===== Contact form (Formspree) =====
-const contactForm = document.getElementById('contactForm');
-const formMsg = document.getElementById('formMsg');
+// ===== Contact =====
+const contactForm = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
 
-if (contactForm) {
-  contactForm.addEventListener('submit', async (e) => {
+contactForm.addEventListener("submit", async function (e) {
+
     e.preventDefault();
-    const data = new FormData(contactForm);
 
-    formMsg.textContent = '> sending...';
-    formMsg.style.display = 'block';
+    formMsg.style.display = "block";
+    formMsg.textContent = "> Sending...";
+
+    const formData = new FormData(contactForm);
 
     try {
-      const res = await fetch(contactForm.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
 
-      if (res.ok) {
-        formMsg.textContent = '> message sent. thanks — I\'ll get back to you soon.';
-        contactForm.reset();
-      } else {
-        formMsg.textContent = '> something went wrong. try emailing me directly instead.';
-      }
-    } catch (err) {
-      formMsg.textContent = '> network error. try emailing me directly instead.';
+        const response = await fetch(contactForm.action, {
+
+            method: "POST",
+            body: formData
+
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+
+            formMsg.textContent =
+                "> Message sent successfully. Thank you!";
+
+            contactForm.reset();
+
+        } else {
+
+            formMsg.textContent =
+                "> Failed to send message.";
+
+        }
+
+    } catch (error) {
+
+        formMsg.textContent =
+            "> Network error. Please try again.";
+
     }
-  });
-}
+
+});

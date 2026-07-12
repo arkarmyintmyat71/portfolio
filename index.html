@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arkar Myint Myat — Web Developer (Full-Stack)</title>
-  <meta name="description" content="Arkar Myint Myat — Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
+  <meta name="description"
+    content="Arkar Myint Myat — Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
   <meta property="og:title" content="Arkar Myint Myat — Web Developer (Full-Stack)">
-  <meta property="og:description" content="Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
+  <meta property="og:description"
+    content="Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
   <meta property="og:image" content="assets/img/profile.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
@@ -447,7 +449,9 @@
     <section id="contact">
       <div class="wrap">
         <p class="section-index center" data-reveal>Contact</p>
-        <h2 class="center" data-reveal>Let's build <span>something.</span></h2>
+        <h2 class="center" data-reveal>
+          Let's build <span>something.</span>
+        </h2>
 
         <div class="terminal contact-terminal" data-reveal>
           <div class="terminal-bar">
@@ -456,19 +460,37 @@
             <span class="tdot" style="background:#28c840"></span>
             <span class="term-title">send_message.sh</span>
           </div>
-          <form class="terminal-body contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID"
+
+          <form class="terminal-body contact-form" id="contactForm" action="https://api.web3forms.com/submit"
             method="POST">
-            <label class="cmd-row"><span class="prompt">&gt; name:</span>
-              <input id="name" name="name" type="text" placeholder="your name" required>
+
+            <input type="hidden" name="access_key" value="79d579b5-30a2-4f54-bc58-061c4986adaa">
+
+            <input type="hidden" name="subject" value="New Portfolio Message">
+
+            <input type="hidden" name="from_name" value="Portfolio Website">
+
+            <label class="cmd-row">
+              <span class="prompt">&gt; name:</span>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
             </label>
-            <label class="cmd-row"><span class="prompt">&gt; email:</span>
+
+            <label class="cmd-row">
+              <span class="prompt">&gt; email:</span>
               <input id="email" name="email" type="email" placeholder="you@example.com" required>
             </label>
-            <label class="cmd-row cmd-row-area"><span class="prompt">&gt; message:</span>
-              <textarea id="message" name="message" placeholder="tell me about your project..." required></textarea>
+
+            <label class="cmd-row cmd-row-area">
+              <span class="prompt">&gt; message:</span>
+              <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
             </label>
-            <button class="run-btn" type="submit">$ run ./send.sh</button>
+
+            <button class="run-btn" type="submit">
+              $ run ./send.sh
+            </button>
+
             <p class="form-note" id="formMsg"></p>
+
           </form>
         </div>
       </div>
