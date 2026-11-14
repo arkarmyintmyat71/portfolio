@@ -1,509 +1,532 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkar Myint Myat — Web Developer (Full-Stack)</title>
+  <title>Arkar Myint Myat · Full-stack developer, Java and React</title>
   <meta name="description"
-    content="Arkar Myint Myat — Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
-  <meta property="og:title" content="Arkar Myint Myat — Web Developer (Full-Stack)">
+    content="Arkar Myint Myat builds web apps end to end with Java, Spring Boot and React. CS student at Rangsit University in Bangkok, previously a backend developer at Yoma Bank. Open to internships and junior roles.">
+  <meta name="theme-color" content="#04050d">
+  <meta property="og:title" content="Arkar Myint Myat · Full-stack developer">
   <meta property="og:description"
-    content="Java/Spring backend developer and full-stack web developer, currently studying Computer Science in Bangkok.">
-  <meta property="og:image" content="assets/img/profile.jpg">
+    content="Java, Spring Boot and React. Three shipped projects, a year of production Java at a bank, open to internships and junior roles.">
+  <meta property="og:image" content="https://arkarmyintmyat71.github.io/portfolio/assets/img/scholarshare.webp">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/jpeg" href="assets/img/profile.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23070914'/><text x='32' y='44' font-family='Arial,sans-serif' font-weight='800' font-size='34' text-anchor='middle' fill='%23e9ecf8'>A</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // mark JS as available (enables entrance animations), then pick the saved theme before paint (dark is the default)
+    document.documentElement.classList.add('js');
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') document.documentElement.dataset.theme = saved;
+    } catch (e) {}
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arkar Myint Myat",
+    "jobTitle": "Full-stack web developer",
+    "alumniOf": "Rangsit University",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bangkok", "addressCountry": "TH" },
+    "sameAs": [
+      "https://github.com/arkarmyintmyat71",
+      "https://www.linkedin.com/in/arkar-myint-myat-23a4a4283"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <a class="skip" href="#work">Skip to projects</a>
 
-  <div class="grid-bg" aria-hidden="true"></div>
-
-  <header>
-    <div class="wrap nav-row">
-      <div class="logo">Arkar<span class="cursor">_</span></div>
-      <nav>
-        <ul class="navlinks" id="navlinks">
-          <li><a href="#home" class="active">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#experience">experience</a></li>
-          <li><a href="#skills">stack</a></li>
-          <li><a href="#projects">work</a></li>
-          <li><a href="#certificates">certs</a></li>
-          <li><a href="#contact">contact</a></li>
+  <header class="site-head">
+    <div class="wrap head-row">
+      <a class="mark" href="#top" aria-label="Arkar Myint Myat, back to top">
+        <span class="mark-full">Arkar Myint Myat</span><span class="mark-short" aria-hidden="true">Arkar</span>
+      </a>
+      <nav class="nav-wrap" id="navWrap" aria-label="Sections">
+        <ul class="nav" id="nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="navtoggle" id="navtoggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="true"
+        aria-label="Switch to light mode">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z" fill="currentColor"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1.5v2.5M12 20v2.5M1.5 12H4M20 12h2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></g></svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navWrap">
+        <span class="sr-only">Menu</span>
+        <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
       </button>
     </div>
+    <div class="progress" aria-hidden="true"><i id="progress"></i></div>
   </header>
 
-  <main>
+  <main id="top">
 
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section class="hero">
       <div class="wrap hero-grid">
-
         <div class="hero-copy">
-          <p class="hello-tag">Hello,</p>
-          <h1>I'm <span class="amber">Arkar</span><br>Myint Myat</h1>
-          <p class="role-tag">Web Developer (Full-Stack)</p>
-          <p class="hero-desc">I'm a Computer Science student at Rangsit University in Bangkok with a passion for
-            building web applications from start to finish.
-            I enjoy developing back-end systems with Java and creating responsive, user-friendly interfaces using React
-            and Next.js.
-            With a strong foundation in HTML and CSS, I focus on building clean, functional, and reliable web
-            applications.
-          </p>
-
-          <div class="cta-row">
-            <a class="btn-primary" href="#contact">Hire Me</a>
-            <a class="btn-outline" href="#projects">View My Work</a>
+          <div class="hero-id">
+            <img class="hero-avatar" src="assets/img/profile.jpg" alt="" width="541" height="604">
+            <p class="status"><span class="dot" aria-hidden="true"></span>Open to internships and junior roles,
+              in Bangkok or remote</p>
           </div>
-
-          <div class="social-row">
-            <a href="https://github.com/arkarmyintmyat71" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.3-3.2-.1-.3-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.3-1.6 3.4-1.2 3.4-1.2.6 1.7.2 2.9.1 3.2.8.9 1.3 2 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/arkar-myint-myat-23a4a4283" target="_blank" rel="noopener"
-              aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-.9 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z" />
-              </svg>
-            </a>
-            <a href="mailto:arkarmyintmyat71@gmail.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16v16H4z" />
-                <path d="m4 6 8 7 8-7" />
-              </svg>
-            </a>
+          <h1 class="headline" aria-label="Full-stack developer building with Java and React.">
+            <span class="line" aria-hidden="true"><span>Full-stack developer</span></span>
+            <span class="line" aria-hidden="true"><span>building with</span></span>
+            <span class="line" aria-hidden="true"><span>Java and React.</span></span>
+          </h1>
+          <p class="hero-lede">I'm Arkar Myint Myat. I build Spring Boot APIs and the React apps that use them, from
+            the database schema to the final screen. I spent a year as a backend developer at Yoma Bank and now study
+            Computer Science at Rangsit University in Bangkok.</p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#work">See my projects</a>
+            <a class="btn btn-line" href="mailto:arkarmyintmyat71@gmail.com">Email me</a>
           </div>
+          <ul class="profiles" aria-label="Profiles">
+            <li><a href="https://github.com/arkarmyintmyat71" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/arkar-myint-myat-23a4a4283" target="_blank"
+                rel="noopener">LinkedIn</a></li>
+          </ul>
         </div>
 
-        <!-- large hero portrait -->
-        <div class="stack-portrait">
-          <img src="assets/img/profile.jpg" alt="Arkar Myint Myat" class="portrait-img">
-        </div>
+        <figure class="hero-photo">
+          <img src="assets/img/profile.jpg" alt="Arkar Myint Myat in a dark suit and blue tie" width="541"
+            height="604" fetchpriority="high">
+        </figure>
+      </div>
 
+      <div class="wrap">
+        <dl class="proof">
+          <div data-reveal>
+            <dt><span data-count="1">1</span> year</dt>
+            <dd>Backend developer at Yoma Bank, on gRPC and Kafka services</dd>
+          </div>
+          <div data-reveal style="--d:.08s">
+            <dt><span data-count="4">4</span> live apps</dt>
+            <dd>Java and React projects, built and deployed</dd>
+          </div>
+          <div data-reveal style="--d:.16s">
+            <dt><span data-count="7">7</span> distinctions</dt>
+            <dd><a href="#credentials">NCC Education Level 4 Diploma in Computing</a></dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="wrap about-grid">
-        <div class="about-copy" data-reveal>
-          <p class="section-index">About</p>
-          <h2>Built for the whole stack, <span>not just one layer.</span></h2>
-          <p class="lede">I'm a Computer Science student at Rangsit University
-            who enjoys understanding how an entire system works—not
-            just one part of it. From designing database schemas and
-            building APIs to creating interfaces that people actually use,
-            I like seeing how every piece fits together.</p>
-
-          <p class="lede">My journey started with one semester in Electrical
-            Communication Engineering before I earned a Java Developer
-            certificate from JDC, which opened the door to a junior Java
-            developer role at a commercial bank. While working there,
-            I kept studying and completed a Level 4 Diploma in Computing.
-            After about a year in that role, I decided to go further and
-            enrolled as a Computer Science student in Bangkok, building on
-            everything I'd learned so far.</p>
-
-          <div class="terminal">
-            <div class="terminal-bar">
-              <span class="tdot" style="background:#ff5f57"></span>
-              <span class="tdot" style="background:#febc2e"></span>
-              <span class="tdot" style="background:#28c840"></span>
-              <span class="term-title">whoami.sh</span>
-            </div>
-            <div class="terminal-body">
-              <p><span class="prompt">$</span> whoami</p>
-              <p class="out">arkar-myint-myat — web-developer (full-stack)</p>
-              <p><span class="prompt">$</span> cat focus.txt</p>
-              <p class="out">Java · React · Next.js · JavaScript · HTML/CSS</p>
-              <p><span class="prompt">$</span> cat status.txt</p>
-              <p class="out">open to internships &amp; junior web-developer (full-stack) roles<span
-                  class="blink">_</span></p>
-            </div>
-          </div>
-
-          <div class="fact-row" data-reveal>
-            <div class="fact-item">
-              <span class="fact-num">1+ yr</span>
-              <span class="fact-label">production Java @ a bank</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-num">2</span>
-              <span class="fact-label">countries lived &amp; studied in</span>
-            </div>
-            <div class="fact-item">
-              <span class="fact-num">B2</span>
-              <span class="fact-label">English · British Council</span>
-            </div>
-          </div>
+    <!-- WORK -->
+    <section id="work" class="work">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2>Selected work</h2>
+          <p>Each project shows what I built and the layers it runs on, from the browser down to the database.</p>
         </div>
 
+        <!-- ScholarShare -->
+        <article class="case" data-reveal-group>
+          <a class="shot shot-browser" href="https://scholarshare2.netlify.app/" target="_blank" rel="noopener"
+            aria-label="Open ScholarShare live site">
+            <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>scholarshare2.netlify.app</b></span>
+            <img src="assets/img/scholarshare.webp" alt="ScholarShare home page with a research search bar"
+              width="1600" height="1000" loading="lazy">
+          </a>
+
+          <div class="case-body">
+            <p class="case-kind">Full-stack platform · thesis project</p>
+            <h3>ScholarShare</h3>
+            <p class="case-sum">A place for university students to publish their research, find other people's work
+              and discuss it by topic.</p>
+            <ul class="case-points">
+              <li>Upload, search and browse research papers by category</li>
+              <li>Comments, ratings, bookmarks and in-app notifications</li>
+              <li>Sign in with email or Google, secured with JWT</li>
+              <li>Admin tools to review uploads, manage users and moderate content</li>
+            </ul>
+
+            <div class="layers" role="table" aria-label="How ScholarShare is built">
+              <div class="layer l1" role="row"><span role="rowheader">Browser</span><span role="cell">React 19, React
+                  Router, Vite</span></div>
+              <div class="layer l2" role="row"><span role="rowheader">API</span><span role="cell">Spring Boot, Spring
+                  Security, MapStruct</span></div>
+              <div class="layer l3" role="row"><span role="rowheader">Data</span><span role="cell">MySQL, papers stored
+                  as files in the database</span></div>
+              <div class="layer l4" role="row"><span role="rowheader">Ship</span><span role="cell">Docker, Netlify, 73
+                  Postman API tests</span></div>
+            </div>
+
+            <div class="case-links">
+              <a href="https://scholarshare2.netlify.app/" target="_blank" rel="noopener">Visit site</a>
+              <a href="https://github.com/arkarmyintmyat71/ScholarShare" target="_blank" rel="noopener">Read the
+                code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pleasant Corner -->
+        <article class="case case-flip" data-reveal-group>
+          <a class="shot shot-phone" href="https://plesant-corner.onrender.com/" target="_blank" rel="noopener"
+            aria-label="Open Pleasant Corner live site">
+            <img src="assets/img/pleasant-corner.webp"
+              alt="Pleasant Corner customer screen on a phone, inviting the guest to browse the menu from their table"
+              width="480" height="1014" loading="lazy">
+          </a>
+
+          <div class="case-body">
+            <p class="case-kind">Full-stack web app · café ordering</p>
+            <h3>Pleasant Corner</h3>
+            <p class="case-sum">A café ordering system. Guests scan a QR code at their table and order from their
+              phone, the kitchen sees the order straight away, and the owner runs everything from one dashboard.</p>
+            <ul class="case-points">
+              <li>Three roles with their own screens: admin, kitchen and customer</li>
+              <li>Admins manage staff, menu items, toppings, discounts and tables</li>
+              <li>Each table gets its own generated QR code</li>
+              <li>Kitchen display where staff move orders from new to served</li>
+            </ul>
+
+            <div class="layers" role="table" aria-label="How Pleasant Corner is built">
+              <div class="layer l1" role="row"><span role="rowheader">Browser</span><span role="cell">Thymeleaf pages,
+                  JavaScript, Bootstrap</span></div>
+              <div class="layer l2" role="row"><span role="rowheader">Server</span><span role="cell">Spring Boot 3,
+                  Spring MVC, Spring Security</span></div>
+              <div class="layer l3" role="row"><span role="rowheader">Data</span><span role="cell">MySQL with Spring
+                  Data JPA</span></div>
+              <div class="layer l4" role="row"><span role="rowheader">Ship</span><span role="cell">Docker on Render,
+                  ZXing for QR codes</span></div>
+            </div>
+
+            <div class="case-links">
+              <a href="https://plesant-corner.onrender.com/" target="_blank" rel="noopener">Visit site</a>
+              <a href="https://github.com/arkarmyintmyat71/Plesant-Corner" target="_blank" rel="noopener">Read the
+                code</a>
+            </div>
+            <p class="case-note">Hosted on Render's free tier, so the first load can take about 30 seconds.</p>
+          </div>
+        </article>
+
+        <!-- Gemini chatbot -->
+        <article class="case" data-reveal-group>
+          <a class="shot shot-chat" href="https://geminiaichatbot71.netlify.app/" target="_blank" rel="noopener"
+            aria-label="Open the Gemini AI chatbot live site">
+            <span class="chat-card">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>geminiaichatbot71.netlify.app</b></span>
+              <img src="assets/img/chatbot.webp"
+                alt="Chatbot conversation: the bot explains Spring Boot and gives a tip for React beginners"
+                width="640" height="820" loading="lazy">
+            </span>
+          </a>
+
+          <div class="case-body">
+            <p class="case-kind">React app · AI chat</p>
+            <h3>Gemini AI Chatbot</h3>
+            <p class="case-sum">A chat app that answers questions using Google's Gemini AI. Replies appear word by
+              word as they arrive, like typing.</p>
+            <ul class="case-points">
+              <li>Streams each reply live instead of waiting for the full answer</li>
+              <li>Remembers the last 10 messages, so follow-up questions make sense</li>
+              <li>Tries a backup model automatically when the first one is busy</li>
+              <li>Auto-scrolls to new messages, shows timestamps and can clear the chat</li>
+            </ul>
+
+            <div class="layers" role="table" aria-label="How the Gemini AI Chatbot is built">
+              <div class="layer l1" role="row"><span role="rowheader">Browser</span><span role="cell">React 19,
+                  custom hooks, Vite</span></div>
+              <div class="layer l2" role="row"><span role="rowheader">AI</span><span role="cell">Google Gemini API,
+                  streamed replies</span></div>
+              <div class="layer l4" role="row"><span role="rowheader">Ship</span><span role="cell">Netlify, API key
+                  kept in environment variables</span></div>
+            </div>
+
+            <div class="case-links">
+              <a href="https://geminiaichatbot71.netlify.app/" target="_blank" rel="noopener">Visit site</a>
+              <a href="https://github.com/arkarmyintmyat71/Chatbot-Project" target="_blank" rel="noopener">Read the
+                code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Standing desk -->
+        <article class="case case-flip" data-reveal-group>
+          <a class="shot shot-browser" href="https://arkarmyintmyat71.github.io/Standing-desk/" target="_blank"
+            rel="noopener" aria-label="Open the ABBY standing desk store live site">
+            <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>arkarmyintmyat71.github.io/Standing-desk</b></span>
+            <img src="assets/img/standing-desk.webp" alt="ABBY store home page with a white standing desk on green"
+              width="1600" height="1000" loading="lazy">
+          </a>
+
+          <div class="case-body">
+            <p class="case-kind">Front-end · online store</p>
+            <h3>ABBY Standing Desks</h3>
+            <p class="case-sum">A five-page storefront for a standing desk shop, with products, a health benefits
+              page, a basket and a contact form.</p>
+            <ul class="case-points">
+              <li>Responsive layout built without a framework</li>
+              <li>Product grid, basket page and embedded video</li>
+            </ul>
+
+            <div class="layers" role="table" aria-label="How ABBY Standing Desks is built">
+              <div class="layer l1" role="row"><span role="rowheader">Browser</span><span role="cell">HTML, CSS,
+                  JavaScript</span></div>
+              <div class="layer l4" role="row"><span role="rowheader">Ship</span><span role="cell">GitHub
+                  Pages</span></div>
+            </div>
+
+            <div class="case-links">
+              <a href="https://arkarmyintmyat71.github.io/Standing-desk/" target="_blank" rel="noopener">Visit
+                site</a>
+              <a href="https://github.com/arkarmyintmyat71/Standing-desk" target="_blank" rel="noopener">Read the
+                code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- More repos -->
+        <div class="more" data-reveal>
+          <h3>More on GitHub</h3>
+          <ul class="repo-list">
+            <li>
+              <a href="https://github.com/arkarmyintmyat71/Java-SpringBoot-Backend" target="_blank"
+                rel="noopener">Spring Boot REST API</a>
+              <span class="repo-what">Data models, endpoints and a service layer for a CRUD back end</span>
+              <span class="repo-tech">Java, Spring Boot</span>
+            </li>
+            <li>
+              <a href="https://github.com/arkarmyintmyat71/SpringSecurity" target="_blank" rel="noopener">Spring
+                Security</a>
+              <span class="repo-what">Login, role-based access and protected REST endpoints</span>
+              <span class="repo-tech">Java, Spring Security</span>
+            </li>
+            <li>
+              <a href="https://github.com/arkarmyintmyat71/Employee-Management-System" target="_blank"
+                rel="noopener">Employee Management System</a>
+              <span class="repo-what">Add, edit and view employee records</span>
+              <span class="repo-tech">Next.js</span>
+            </li>
+            <li>
+              <a href="https://github.com/arkarmyintmyat71/Angular-FrontEnd" target="_blank" rel="noopener">Angular
+                front end</a>
+              <span class="repo-what">A component-based interface with reusable parts</span>
+              <span class="repo-tech">Angular</span>
+            </li>
+            <li>
+              <a href="https://github.com/arkarmyintmyat71/Rangsit_sec_sem-PJ" target="_blank"
+                rel="noopener">Semester project</a>
+              <span class="repo-what">Second-semester coursework at Rangsit University</span>
+              <span class="repo-tech">Python</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience">
-      <div class="wrap">
-        <p class="section-index center" data-reveal>Experience</p>
-        <h2 class="center" data-reveal>Time served <span>in production.</span></h2>
-
-        <div class="timeline" data-reveal>
-
-          <article class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-date">04/2023 — 05/2024</span>
-                <span class="tl-tag">Yoma Bank</span>
-              </div>
-              <h3>Junior Backend Developer (Java)</h3>
-              <p class="tl-loc">Yangon, Myanmar · Digital Products Dept., Products, Services &amp; Channels Division</p>
-              <ul class="tl-list">
-                <li>Started on the <strong>Business Banking Portal</strong> team, handling error-message and
-                  notification services behind gRPC and REST controllers.</li>
-                <li>Now on the <strong>Research &amp; Development</strong> team, building part of a workflow engine that
-                  feeds into Kafka.</li>
-                <li>Deliver service responses from Kafka into new Kafka topics using gRPC.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="tl-item">
-            <div class="tl-dot"></div>
-            <div class="tl-card">
-              <div class="tl-head">
-                <span class="tl-date">04/2023 — Present</span>
-                <span class="tl-tag">Grafo-Tech</span>
-              </div>
-              <h3>Owner</h3>
-              <p class="tl-loc">Yangon, Myanmar</p>
-              <ul class="tl-list">
-                <li>Run a small tech venture alongside full-time backend work — scoping, building and shipping client
-                  projects end to end.</li>
-              </ul>
-            </div>
-          </article>
-
+    <section id="experience" class="experience">
+      <div class="wrap two-col">
+        <div class="section-head" data-reveal>
+          <h2>Experience</h2>
+          <p>Where I've written code that other people depend on.</p>
         </div>
+
+        <ol class="timeline" id="timeline">
+          <li>
+            <p class="when"><time datetime="2023-04-03">Apr 2023</time> to <time datetime="2024-05">May 2024</time></p>
+            <h3>Junior Associate, Backend Developer at Yoma Bank</h3>
+            <p class="where">Digital Products Department, Yangon</p>
+            <ul>
+              <li>Built error-message and notification services for the Business Banking Portal, exposed through gRPC
+                and REST.</li>
+              <li>Moved to the research and development team to build part of an internal workflow engine on Kafka.
+              </li>
+              <li>Passed service responses between Kafka topics over gRPC, with logs monitored in Graylog.</li>
+            </ul>
+            <button class="doc-link" type="button" data-full="assets/img/letter-yoma.webp"
+              data-alt="Yoma Bank letter confirming employment as Junior Associate, Backend Developer, from 3 April 2023">View
+              employment letter</button>
+          </li>
+          <li>
+            <p class="when"><time datetime="2023-04">Apr 2023</time> to now</p>
+            <h3>Founder of Grafo-Tech</h3>
+            <p class="where">Yangon</p>
+            <ul>
+              <li>Run a small studio that scopes, builds and delivers web projects for clients.</li>
+            </ul>
+          </li>
+          <li>
+            <p class="when">Now</p>
+            <h3>BSc Computer Science, Rangsit University</h3>
+            <p class="where">Bangkok</p>
+          </li>
+        </ol>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="skills">
       <div class="wrap">
-        <p class="section-index center" data-reveal>Stack</p>
-        <h2 class="center" data-reveal>What each layer <span>is built with.</span></h2>
+        <div class="section-head" data-reveal>
+          <h2>What I work with</h2>
+          <p>Grouped by the layer of an app they belong to. The first line in each group is what I use most.</p>
+        </div>
 
-        <div class="layer-grid" data-reveal>
-
-          <div class="layer-col">
-            <div class="layer-head"><span class="layer-dot amber"></span>Backend</div>
-            <div class="ruler-row">
-              <span class="ruler-label">Java</span>
-              <div class="ruler"><i style="width:88%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">Spring Boot &amp; Spring MVC</span>
-              <div class="ruler"><i style="width:82%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">REST APIs &amp; gRPC</span>
-              <div class="ruler"><i style="width:78%"></i></div>
-            </div>
+        <div class="skill-stack" data-reveal-group>
+          <div class="skill-layer l1">
+            <h3>Browser</h3>
+            <p class="main">React, JavaScript, HTML, CSS</p>
+            <p>Next.js, Angular, Bootstrap, Thymeleaf</p>
           </div>
-
-          <div class="layer-col">
-            <div class="layer-head"><span class="layer-dot teal"></span>Frontend</div>
-            <div class="ruler-row">
-              <span class="ruler-label">Angular</span>
-              <div class="ruler"><i style="width:70%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">JavaScript</span>
-              <div class="ruler"><i style="width:80%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">Bootstrap</span>
-              <div class="ruler"><i style="width:72%"></i></div>
-            </div>
+          <div class="skill-layer l2">
+            <h3>Server</h3>
+            <p class="main">Java, Spring Boot, Spring Security</p>
+            <p>REST, gRPC, Spring MVC, JWT, OAuth 2</p>
           </div>
-
-          <div class="layer-col">
-            <div class="layer-head"><span class="layer-dot paper"></span>Data &amp; Messaging</div>
-            <div class="ruler-row">
-              <span class="ruler-label">SQL / MySQL Workbench</span>
-              <div class="ruler"><i style="width:76%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">MongoDB</span>
-              <div class="ruler"><i style="width:65%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">Kafka &amp; Graylog</span>
-              <div class="ruler"><i style="width:68%"></i></div>
-            </div>
+          <div class="skill-layer l3">
+            <h3>Data</h3>
+            <p class="main">MySQL, Spring Data JPA</p>
+            <p>MongoDB, Kafka</p>
           </div>
-
-          <div class="layer-col">
-            <div class="layer-head"><span class="layer-dot amber"></span>Tooling</div>
-            <div class="ruler-row">
-              <span class="ruler-label">HTML5 &amp; CSS3</span>
-              <div class="ruler"><i style="width:85%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">Git · GitHub · GitLab</span>
-              <div class="ruler"><i style="width:80%"></i></div>
-            </div>
-            <div class="ruler-row">
-              <span class="ruler-label">Docker</span>
-              <div class="ruler"><i style="width:65%"></i></div>
-            </div>
+          <div class="skill-layer l4">
+            <h3>Ship</h3>
+            <p class="main">Git, GitHub, Docker</p>
+            <p>GitLab, Postman, Graylog, Render, Netlify</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
+    <!-- CREDENTIALS -->
+    <section id="credentials" class="creds">
       <div class="wrap">
-        <p class="section-index center" data-reveal>Work</p>
-        <h2 class="center" data-reveal>A few things <span>I've shipped.</span></h2>
-
-        <div class="filter-row" data-reveal>
-          <button class="filter-btn active" data-filter="all">all</button>
-          <button class="filter-btn" data-filter="backend">backend</button>
-          <button class="filter-btn" data-filter="frontend">frontend</button>
-          <button class="filter-btn" data-filter="fullstack">fullstack</button>
+        <div class="section-head" data-reveal>
+          <h2>Credentials</h2>
+          <p>Select a certificate to see the original. I've hidden personal ID numbers and my date of birth.</p>
         </div>
 
-        <div class="proj-grid" data-reveal>
-
-          <article class="proj-card" data-cat="backend">
-            <div class="proj-head">
-              <span class="proj-index">W.01</span>
-              <span class="proj-tag">Java</span>
+        <div class="cred-grid" data-reveal-group>
+          <article class="cred cred-wide">
+            <button class="cred-thumb" type="button" data-full="assets/img/cert-ncc.webp"
+              data-alt="NCC Education statement of results for the Level 4 Diploma in Computing">
+              <img src="assets/img/cert-ncc.webp" alt="" width="775" height="855" loading="lazy">
+              <span class="cred-open">View statement</span>
+            </button>
+            <div class="cred-body">
+              <p class="cred-issuer">NCC Education, through KMD Institute · 2024</p>
+              <h3>Level 4 Diploma in Computing</h3>
+              <p>Eight units, seven at distinction and one at merit.</p>
+              <table class="grades">
+                <caption class="sr-only">Unit results</caption>
+                <thead>
+                  <tr><th scope="col">Unit</th><th scope="col">Mark</th><th scope="col">Grade</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Computer Systems</td><td>90</td><td>Distinction</td></tr>
+                  <tr><td>Software Development Techniques</td><td>86</td><td>Distinction</td></tr>
+                  <tr><td>Computer Networks</td><td>75</td><td>Distinction</td></tr>
+                  <tr><td>Databases</td><td>74</td><td>Distinction</td></tr>
+                  <tr><td>Object-Oriented Programming</td><td>72</td><td>Distinction</td></tr>
+                  <tr><td>Designing and Developing a Website</td><td>70</td><td>Distinction</td></tr>
+                  <tr><td>Office Solutions Development</td><td>70</td><td>Distinction</td></tr>
+                  <tr><td>Skills for Computing</td><td>66</td><td>Merit</td></tr>
+                </tbody>
+              </table>
             </div>
-            <h3>Java Spring Boot Backend</h3>
-            <p>A REST API back end covering data models, endpoints and service-layer
-              logic for a real-world application.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Java-SpringBoot-Backend" target="_blank"
-              rel="noopener">→ view_repository</a>
           </article>
 
-          <article class="proj-card" data-cat="backend">
-            <div class="proj-head">
-              <span class="proj-index">W.02</span>
-              <span class="proj-tag">Java</span>
+          <article class="cred">
+            <button class="cred-thumb cred-thumb-land" type="button" data-full="assets/img/cert-jdc.webp"
+              data-alt="Java Developer Class certificate of completion for the One Stop Java Course, December 2022">
+              <img src="assets/img/cert-jdc.webp" alt="" width="1400" height="990" loading="lazy">
+              <span class="cred-open">View certificate</span>
+            </button>
+            <div class="cred-body">
+              <p class="cred-issuer">Java Developer Class (JDC) · Dec 2022</p>
+              <h3>One Stop Java Course</h3>
+              <p>Java SE, the Spring Framework and Angular. This course led to my backend role at Yoma Bank.</p>
             </div>
-            <h3>Spring Security</h3>
-            <p>An authentication and authorization module built with Spring Security —
-              covering login, role-based access control and securing REST endpoints.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/SpringSecurity" target="_blank"
-              rel="noopener">→ view_repository</a>
           </article>
 
-          <article class="proj-card" data-cat="frontend">
-            <div class="proj-head">
-              <span class="proj-index">W.03</span>
-              <span class="proj-tag">React</span>
+          <article class="cred">
+            <button class="cred-thumb" type="button" data-full="assets/img/cert-english.webp"
+              data-alt="British Council EnglishScore certificate, CEFR B2, overall score 468">
+              <img src="assets/img/cert-english.webp" alt="" width="1000" height="1413" loading="lazy">
+              <span class="cred-open">View certificate</span>
+            </button>
+            <div class="cred-body">
+              <p class="cred-issuer">British Council EnglishScore · Mar 2024</p>
+              <h3>English, CEFR B2</h3>
+              <p>Upper intermediate, overall score 468. Grammar 503, vocabulary 487, listening 448, reading 432.</p>
+              <p class="cred-verify">Check it at <a href="https://www.englishscore.com/verify" target="_blank"
+                  rel="noopener">englishscore.com/verify</a> with code <code>ab95b1f6</code>.</p>
             </div>
-            <h3>Chatbot</h3>
-            <p>A conversational chat interface that takes user input and returns
-              automated responses in a message-based UI.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Chatbot-Project" target="_blank"
-              rel="noopener">→ view_repository</a>
           </article>
-
-          <article class="proj-card" data-cat="frontend">
-            <div class="proj-head">
-              <span class="proj-index">W.04</span>
-              <span class="proj-tag">Next.js</span>
-            </div>
-            <h3>Employee Management System</h3>
-            <p>A system for managing employee records — covering core CRUD operations
-              like adding, updating and viewing employee data.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Employee-Management-System" target="_blank"
-              rel="noopener">→ view_repository</a>
-          </article>
-
-          <article class="proj-card" data-cat="frontend">
-            <div class="proj-head">
-              <span class="proj-index">W.05</span>
-              <span class="proj-tag">HTML · CSS</span>
-            </div>
-            <h3>Standing Desk Landing Page</h3>
-            <p>A clean, focused product landing page built around clear layout and
-              simple, trustworthy visuals.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Standing-desk" target="_blank"
-              rel="noopener">→ view_repository</a>
-          </article>
-
-          <article class="proj-card" data-cat="frontend">
-            <div class="proj-head">
-              <span class="proj-index">W.06</span>
-              <span class="proj-tag">Front-End</span>
-            </div>
-            <h3>Angular Front-End</h3>
-            <p>A component-driven interface focused on clean structure, reusable
-              components and a responsive layout.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Angular-FrontEnd" target="_blank"
-              rel="noopener">→ view_repository</a>
-          </article>
-
-          <article class="proj-card" data-cat="fullstack">
-            <div class="proj-head">
-              <span class="proj-index">W.07</span>
-              <span class="proj-tag">Java(MVC)</span>
-            </div>
-            <h3>Plesant Corner</h3>
-            <p>A Java-based web application — exact scope and features to be confirmed.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Plesant-Corner" target="_blank"
-              rel="noopener">→ view_repository</a>
-          </article>
-
-          <article class="proj-card" data-cat="backend">
-            <div class="proj-head">
-              <span class="proj-index">W.08</span>
-              <span class="proj-tag">Python</span>
-            </div>
-            <h3>Rangsit Semester Project</h3>
-            <p>University coursework applying core programming and problem-solving
-              concepts to a practical assignment.</p>
-            <a class="proj-link" href="https://github.com/arkarmyintmyat71/Rangsit_sec_sem-PJ" target="_blank"
-              rel="noopener">→ view_repository</a>
-          </article>
-
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <div class="wrap">
-        <p class="section-index center" data-reveal>Certificates</p>
-        <h2 class="center" data-reveal>Credentials <span>along the way.</span></h2>
-
-        <div class="cert-grid" data-reveal>
-
-          <article class="cert-card">
-            <div class="cert-head">
-              <span class="cert-index">C.01</span>
-              <span class="cert-tag">NCC Education</span>
-            </div>
-            <h3>Level 4 Diploma in Computing</h3>
-            <p class="cert-issuer">KMD Institute, Myanmar · 2024</p>
-            <div class="cert-stat">7 Distinction · 1 Merit</div>
-          </article>
-
-          <article class="cert-card">
-            <div class="cert-head">
-              <span class="cert-index">C.02</span>
-              <span class="cert-tag">JDC</span>
-            </div>
-            <h3>One Stop Java Course</h3>
-            <p class="cert-issuer">Java Developer Class · Dec 18, 2022</p>
-            <p>Covers Java Standard Edition, Spring Framework and Angular
-              Framework — the same stack behind most of the projects above.</p>
-          </article>
-
-          <article class="cert-card">
-            <div class="cert-head">
-              <span class="cert-index">C.03</span>
-              <span class="cert-tag">British Council</span>
-            </div>
-            <h3>English — B2</h3>
-            <p class="cert-issuer">British Council</p>
-          </article>
-
-          <article class="cert-card">
-            <div class="cert-head">
-              <span class="cert-index">C.04</span>
-              <span class="cert-tag">Myanma Computer Co.</span>
-            </div>
-            <h3>Microsoft Office 2010 Course</h3>
-            <p class="cert-issuer">Myanma Computer Company</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
+    <dialog class="viewer" id="viewer" aria-label="Document viewer">
+      <form method="dialog"><button class="viewer-close" type="submit">Close</button></form>
+      <img id="viewerImg" src="" alt="">
+    </dialog>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <p class="section-index center" data-reveal>Contact</p>
-        <h2 class="center" data-reveal>
-          Let's build <span>something.</span>
-        </h2>
-
-        <div class="terminal contact-terminal" data-reveal>
-          <div class="terminal-bar">
-            <span class="tdot" style="background:#ff5f57"></span>
-            <span class="tdot" style="background:#febc2e"></span>
-            <span class="tdot" style="background:#28c840"></span>
-            <span class="term-title">send_message.sh</span>
-          </div>
-
-          <form class="terminal-body contact-form" id="contactForm" action="https://api.web3forms.com/submit"
-            method="POST">
-
-            <input type="hidden" name="access_key" value="79d579b5-30a2-4f54-bc58-061c4986adaa">
-
-            <input type="hidden" name="subject" value="New Portfolio Message">
-
-            <input type="hidden" name="from_name" value="Portfolio Website">
-
-            <label class="cmd-row">
-              <span class="prompt">&gt; name:</span>
-              <input id="name" name="name" type="text" placeholder="Your name" required>
-            </label>
-
-            <label class="cmd-row">
-              <span class="prompt">&gt; email:</span>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            </label>
-
-            <label class="cmd-row cmd-row-area">
-              <span class="prompt">&gt; message:</span>
-              <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
-            </label>
-
-            <button class="run-btn" type="submit">
-              $ run ./send.sh
-            </button>
-
-            <p class="form-note" id="formMsg"></p>
-
-          </form>
+    <section id="contact" class="contact">
+      <div class="wrap contact-grid" data-reveal-group>
+        <div>
+          <h2>Hiring for an internship or junior role?</h2>
+          <p class="contact-lede">I usually reply within a day. Write to me directly or use the form.</p>
+          <a class="contact-mail" href="mailto:arkarmyintmyat71@gmail.com">arkarmyintmyat71@gmail.com</a>
+          <ul class="profiles profiles-light" aria-label="Profiles">
+            <li><a href="https://github.com/arkarmyintmyat71" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/arkar-myint-myat-23a4a4283" target="_blank"
+                rel="noopener">LinkedIn</a></li>
+          </ul>
         </div>
+
+        <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+          <input type="hidden" name="access_key" value="79d579b5-30a2-4f54-bc58-061c4986adaa">
+          <input type="hidden" name="subject" value="New message from your portfolio">
+          <input type="hidden" name="from_name" value="Portfolio website">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="btn btn-solid btn-on-dark" type="submit">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
   </main>
 
-  <footer>
+  <footer class="site-foot">
     <div class="wrap foot-row">
-      <div class="logo">Arkar<span class="cursor">_</span></div>
-      <p class="foot-copy">© 2026 Arkar Myint Myat — built with HTML, CSS &amp; JS.</p>
+      <p>© 2026 Arkar Myint Myat</p>
+      <p>Hand-written HTML, CSS and JavaScript, hosted on GitHub Pages.</p>
     </div>
   </footer>
 
   <script src="assets/js/script.js"></script>
 </body>
+
+</html>
