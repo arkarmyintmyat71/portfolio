@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arkar Myint Myat · Full-stack developer, Java and React</title>
+  <title>Arkar Myint Myat · Full-stack web developer</title>
   <meta name="description"
     content="Arkar Myint Myat builds web apps end to end with Java, Spring Boot and React. CS student at Rangsit University in Bangkok, previously a backend developer at Yoma Bank. Open to internships and junior roles.">
   <meta name="theme-color" content="#04050d">
@@ -87,10 +87,10 @@
             <p class="status"><span class="dot" aria-hidden="true"></span>Open to internships and junior roles,
               in Bangkok or remote</p>
           </div>
-          <h1 class="headline" aria-label="Full-stack developer building with Java and React.">
-            <span class="line" aria-hidden="true"><span>Full-stack developer</span></span>
-            <span class="line" aria-hidden="true"><span>building with</span></span>
-            <span class="line" aria-hidden="true"><span>Java and React.</span></span>
+          <h1 class="headline" aria-label="I turn ideas into full-stack web apps.">
+            <span class="line" aria-hidden="true"><span>I turn ideas</span></span>
+            <span class="line" aria-hidden="true"><span>into full-stack</span></span>
+            <span class="line" aria-hidden="true"><span>web apps.</span></span>
           </h1>
           <p class="hero-lede">I'm Arkar Myint Myat. I build Spring Boot APIs and the React apps that use them, from
             the database schema to the final screen. I spent a year as a backend developer at Yoma Bank and now study
@@ -140,12 +140,28 @@
 
         <!-- ScholarShare -->
         <article class="case" data-reveal-group>
-          <a class="shot shot-browser" href="https://scholarshare2.netlify.app/" target="_blank" rel="noopener"
-            aria-label="Open ScholarShare live site">
-            <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>scholarshare2.netlify.app</b></span>
-            <img src="assets/img/scholarshare.webp" alt="ScholarShare home page with a research search bar"
-              width="1600" height="1000" loading="lazy">
-          </a>
+          <div class="shot collage collage-3">
+            <button class="collage-item collage-win collage-wide" type="button" data-full="assets/img/scholarshare.webp"
+              data-alt="ScholarShare home page" aria-label="View the ScholarShare home page full size">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>scholarshare2.netlify.app</b></span>
+              <img src="assets/img/scholarshare.webp" alt="ScholarShare home page with a research search bar"
+                width="1600" height="1000" loading="lazy">
+            </button>
+            <button class="collage-item collage-win" type="button" data-full="assets/img/scholarshare-student.webp"
+              data-alt="ScholarShare student dashboard" aria-label="View the student dashboard full size">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>scholarshare2.netlify.app/student</b></span>
+              <img src="assets/img/scholarshare-student.webp"
+                alt="Student dashboard welcoming May, with counts of uploads, papers waiting for review, published and saved research"
+                width="1600" height="716" loading="lazy">
+            </button>
+            <button class="collage-item collage-win" type="button" data-full="assets/img/scholarshare-admin.webp"
+              data-alt="ScholarShare admin overview" aria-label="View the admin overview full size">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>scholarshare2.netlify.app/admin</b></span>
+              <img src="assets/img/scholarshare-admin.webp"
+                alt="Admin overview with papers waiting for review, published research, students, categories and discussion topics"
+                width="1600" height="716" loading="lazy">
+            </button>
+          </div>
 
           <div class="case-body">
             <p class="case-kind">Full-stack platform · thesis project</p>
@@ -156,7 +172,7 @@
               <li>Upload, search and browse research papers by category</li>
               <li>Comments, ratings, bookmarks and in-app notifications</li>
               <li>Sign in with email or Google, secured with JWT</li>
-              <li>Admin tools to review uploads, manage users and moderate content</li>
+              <li>Two roles: students publish and save research, admins review uploads and manage accounts, categories and topics</li>
             </ul>
 
             <div class="layers" role="table" aria-label="How ScholarShare is built">
@@ -175,17 +191,55 @@
               <a href="https://github.com/arkarmyintmyat71/ScholarShare" target="_blank" rel="noopener">Read the
                 code</a>
             </div>
+            <div class="demo" aria-labelledby="demo-ss-title">
+              <p class="demo-title" id="demo-ss-title">Try it yourself</p>
+              <p class="demo-intro">Sign in on the <a href="https://scholarshare2.netlify.app/login" target="_blank"
+                  rel="noopener">ScholarShare login page</a> with a demo account. The server may need a minute to
+                wake up on the first visit.</p>
+              <dl class="demo-grid">
+                <div class="demo-acc">
+                  <dt>Admin</dt>
+                  <dd><span class="demo-label">Email</span><code>admin@scholarshare.com</code><button class="copy"
+                      type="button" data-copy="admin@scholarshare.com" aria-label="Copy admin email">Copy</button></dd>
+                  <dd><span class="demo-label">Password</span><code>Admin@12345</code><button class="copy" type="button"
+                      data-copy="Admin@12345" aria-label="Copy admin password">Copy</button></dd>
+                </div>
+                <div class="demo-acc">
+                  <dt>Student</dt>
+                  <dd><span class="demo-label">Email</span><code>may@uni.edu</code><button class="copy" type="button"
+                      data-copy="may@uni.edu" aria-label="Copy student email">Copy</button></dd>
+                  <dd><span class="demo-label">Password</span><code>May@12345</code><button class="copy" type="button"
+                      data-copy="May@12345" aria-label="Copy student password">Copy</button></dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </article>
 
         <!-- Pleasant Corner -->
         <article class="case case-flip" data-reveal-group>
-          <a class="shot shot-phone" href="https://plesant-corner.onrender.com/" target="_blank" rel="noopener"
-            aria-label="Open Pleasant Corner live site">
-            <img src="assets/img/pleasant-corner.webp"
-              alt="Pleasant Corner customer screen on a phone, inviting the guest to browse the menu from their table"
-              width="480" height="1014" loading="lazy">
-          </a>
+          <div class="shot collage">
+            <button class="collage-item collage-phone" type="button" data-full="assets/img/pleasant-corner.webp"
+              data-alt="Pleasant Corner customer screen on a phone" aria-label="View the customer screen full size">
+              <img src="assets/img/pleasant-corner.webp"
+                alt="Customer screen on a phone, inviting the guest to browse the menu from their table" width="480"
+                height="1014" loading="lazy">
+            </button>
+            <button class="collage-item collage-win" type="button" data-full="assets/img/pleasant-corner-admin.webp"
+              data-alt="Pleasant Corner admin dashboard" aria-label="View the admin dashboard full size">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>plesant-corner.onrender.com/admin/dashboard</b></span>
+              <img src="assets/img/pleasant-corner-admin.webp"
+                alt="Admin dashboard with active orders, today's revenue and current orders by table" width="1600"
+                height="741" loading="lazy">
+            </button>
+            <button class="collage-item collage-win" type="button" data-full="assets/img/pleasant-corner-kitchen.webp"
+              data-alt="Pleasant Corner kitchen display" aria-label="View the kitchen display full size">
+              <span class="chrome" aria-hidden="true"><i></i><i></i><i></i><b>plesant-corner.onrender.com/kitchen/kds</b></span>
+              <img src="assets/img/pleasant-corner-kitchen.webp"
+                alt="Kitchen display with an order ticket per table and buttons to start prep, mark ready and complete"
+                width="1600" height="741" loading="lazy">
+            </button>
+          </div>
 
           <div class="case-body">
             <p class="case-kind">Full-stack web app · café ordering</p>
@@ -214,6 +268,27 @@
               <a href="https://plesant-corner.onrender.com/" target="_blank" rel="noopener">Visit site</a>
               <a href="https://github.com/arkarmyintmyat71/Plesant-Corner" target="_blank" rel="noopener">Read the
                 code</a>
+            </div>
+            <div class="demo" aria-labelledby="demo-title">
+              <p class="demo-title" id="demo-title">Try it yourself</p>
+              <p class="demo-intro">Sign in at the <a href="https://plesant-corner.onrender.com/login" target="_blank"
+                  rel="noopener">staff login page</a> with a demo account.</p>
+              <dl class="demo-grid">
+                <div class="demo-acc">
+                  <dt>Admin</dt>
+                  <dd><span class="demo-label">Username</span><code>admin</code><button class="copy" type="button"
+                      data-copy="admin" aria-label="Copy admin username">Copy</button></dd>
+                  <dd><span class="demo-label">Password</span><code>admin@12345</code><button class="copy" type="button"
+                      data-copy="admin@12345" aria-label="Copy admin password">Copy</button></dd>
+                </div>
+                <div class="demo-acc">
+                  <dt>Kitchen</dt>
+                  <dd><span class="demo-label">Username</span><code>kitchen</code><button class="copy" type="button"
+                      data-copy="kitchen" aria-label="Copy kitchen username">Copy</button></dd>
+                  <dd><span class="demo-label">Password</span><code>kitchen@12345</code><button class="copy"
+                      type="button" data-copy="kitchen@12345" aria-label="Copy kitchen password">Copy</button></dd>
+                </div>
+              </dl>
             </div>
             <p class="case-note">Hosted on Render's free tier, so the first load can take about 30 seconds.</p>
           </div>

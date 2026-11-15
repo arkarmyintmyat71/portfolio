@@ -211,3 +211,29 @@ form?.addEventListener('submit', async e => {
     btn.textContent = 'Send message';
   }
 });
+
+
+/* ---------------- Copy buttons (demo logins) ---------------- */
+document.querySelectorAll('[data-copy]').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.dataset.copy;
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      // fallback for browsers without clipboard access
+      const t = document.createElement('textarea');
+      t.value = text;
+      t.setAttribute('readonly', '');
+      t.style.position = 'absolute';
+      t.style.left = '-9999px';
+      document.body.appendChild(t);
+      t.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      t.remove();
+    }
+    btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    clearTimeout(btn._t);
+    btn._t = setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1600);
+  });
+});

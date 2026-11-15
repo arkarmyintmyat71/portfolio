@@ -1844,3 +1844,201 @@ html[data-theme="light"] body {
 [data-theme="light"] .hero-avatar {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--line);
 }
+
+/* =====================================================================
+   Pleasant Corner screenshots: phone + two browser windows, nothing else
+   ===================================================================== */
+.shot.collage {
+  display: grid;
+  grid-template-columns: 31fr 69fr;
+  grid-template-rows: auto auto;
+  gap: 14px;
+  align-items: start;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+[data-theme="dark"] .shot.collage {
+  box-shadow: none;
+}
+
+.collage-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: #fff;
+  font: inherit;
+  text-align: left;
+  cursor: zoom-in;
+  overflow: hidden;
+  box-shadow: 0 22px 40px -24px rgba(20, 33, 61, .45);
+  transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out);
+}
+
+[data-theme="dark"] .collage-item {
+  box-shadow: 0 22px 44px -22px rgba(0, 0, 0, .7);
+}
+
+.collage-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 50px -24px rgba(20, 33, 61, .55);
+}
+
+.collage-phone {
+  grid-row: 1 / span 2;
+  align-self: stretch;
+  border: none;
+  border-radius: 9% / 4.3%;
+  background: #1a160e;
+}
+
+.collage-phone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  clip-path: inset(1.4% round 8.5% / 4%);
+  transform: scale(1.03);
+}
+
+.collage-win {
+  border-radius: 8px;
+}
+
+.collage-win .chrome {
+  height: 26px;
+  padding: 0 10px;
+  min-width: 0;
+}
+
+.collage-win .chrome i {
+  width: 7px;
+  height: 7px;
+}
+
+.collage-win .chrome b {
+  font-size: .625rem;
+  padding: 3px 8px;
+}
+
+/* keep the screenshot reveal animation, without a frame around the group */
+@media (prefers-reduced-motion: no-preference) {
+  .js .case .shot.collage { clip-path: inset(0 0 100% 0); }
+  .js .case.is-in .shot.collage { clip-path: inset(-40px -40px -60px -40px); }
+  .js .case .shot.collage img { transform: none; }
+  .js .case .shot.collage .collage-phone img { transform: scale(1.03); }
+}
+
+@media (max-width: 520px) {
+  .shot.collage { gap: 10px; }
+  .collage-win .chrome { height: 18px; }
+  .collage-win .chrome b { display: none; }
+}
+
+/* =====================================================================
+   Demo login box (Pleasant Corner)
+   ===================================================================== */
+.demo {
+  margin-top: 28px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+[data-theme="light"] .demo {
+  background: rgba(255, 255, 255, .7);
+}
+
+.demo-title {
+  font-weight: 800;
+  font-size: 1.0625rem;
+  letter-spacing: -.01em;
+}
+
+.demo-intro {
+  margin-top: 4px;
+  color: var(--slate);
+  font-size: .95rem;
+}
+
+.demo-intro a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration-color: var(--ruby);
+  text-underline-offset: 3px;
+}
+
+.demo-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+
+.demo-acc {
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: var(--l1);
+}
+
+.demo-acc dt {
+  font-weight: 700;
+  font-size: .95rem;
+  margin-bottom: 6px;
+}
+
+.demo-acc dd {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.demo-label {
+  font-size: .8125rem;
+  color: var(--slate);
+}
+
+.demo-acc code {
+  font-family: var(--mono);
+  font-size: .875rem;
+  color: var(--navy);
+  overflow-wrap: anywhere;
+}
+
+.copy {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--navy);
+  font: 600 .75rem/1 var(--sans);
+  padding: 6px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  min-width: 4.2rem;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+
+.copy:hover {
+  border-color: var(--navy);
+}
+
+.copy.copied {
+  background: var(--jade);
+  border-color: var(--jade);
+  color: #fff;
+}
+
+/* ScholarShare: home page on top, student and admin dashboards below */
+.shot.collage-3 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.collage-3 .collage-wide {
+  grid-column: 1 / -1;
+}
